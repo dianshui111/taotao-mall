@@ -37,9 +37,9 @@ public class ItemController {
 	}
 	@RequestMapping(value="/item/save",method=RequestMethod.POST)
 	@ResponseBody
-	//用Pojo接受post的内容，属性值必须一致
-	public TaotaoResult createItem(TbItem item) {
-		TaotaoResult result=itemService.createItem(item);
+	//用Pojo接受post的内容，属性值必须一致,String变量与form表单的name一致
+	public TaotaoResult createItem(TbItem item,String desc,String itemParams) throws Exception{
+		TaotaoResult result=itemService.createItem(item,desc,itemParams);
 		return result;
 		
 	}
