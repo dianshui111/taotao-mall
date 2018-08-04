@@ -67,7 +67,7 @@
 	var itemAddEditor ;
 	//页面初始化完毕后执行此方法
 	$(function(){
-		//创建富文本编辑器
+		//创建富文本编辑器,与上面name=desc的textarea表单对应，用于内容同步
 		itemAddEditor = TAOTAO.createEditor("#itemAddForm [name=desc]");
 		//初始化类目选择和图片上传器
 		TAOTAO.init({fun:function(node){
